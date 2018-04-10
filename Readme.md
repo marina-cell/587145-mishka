@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Марина Целищева](https://up.htmlacademy.ru/adaptive/14/user/587145).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Мальнев](https://htmlacademy.ru/profile/fuckomako).
 
 ---
 
