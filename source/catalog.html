@@ -7,9 +7,11 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
-      </a>
+      <div class="page-header__logo">
+        <a href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
+        </a>
+      </div>
       <nav class="main-nav">
         <button class="main-nav__button" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
@@ -21,7 +23,7 @@
               <a class="site-nav__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="mail-nav__list user-nav">
+          <ul class="main-nav__list user-nav">
             <li class="user-nav__item">
               <a class="user-nav__link" href="search.html">Поиск по сайту</a>
             </li>
@@ -93,7 +95,7 @@
           <button class="video__play-button" type="button"><span class="visually-hidden">Запустить видео</span></button>
         </div>
         <p class="promo__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <button class="promo__button button">Сделать заказ</button>
+        <a class="promo__button button" href="#">Сделать заказ</a>
       </section>
     </main>
     <footer class="page-footer">
