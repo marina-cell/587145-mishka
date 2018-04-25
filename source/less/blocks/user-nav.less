@@ -1,3 +1,17 @@
 .user-nav__link {
-  .nav-link;
+  .nav-link();
+}
+
+@media (min-width: @tablet-width) {
+  .user-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .user-nav__link {
+    border: none;
+    padding: 0;
+    min-width: 0;
+    margin-right: 10px;
+  }
 }

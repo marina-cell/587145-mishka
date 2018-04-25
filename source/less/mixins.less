@@ -11,8 +11,33 @@
   border-top: 1px solid #ececec;
 }
 
-.container() {
+.reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper(@width: @page-width) {
+  width: @width;
+  margin: 0 auto;
+}
+
+.container {
   width: 260px;
   padding: 0 30px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 668px;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1050px;
+    padding: 0 50px;
+  }
 }

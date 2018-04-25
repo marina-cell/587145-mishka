@@ -3,6 +3,19 @@
 }
 
 .catalog__list {
-  .container;
-  list-style: none;
+  .reset-list();
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    width: 316px;
+  }
 }
