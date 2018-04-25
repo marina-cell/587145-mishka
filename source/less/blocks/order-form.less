@@ -12,3 +12,34 @@
   padding: 13px 45px;
   font-size: 17px;
 }
+
+.order-form__message textarea {
+  border: 2px solid @additional-color;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__color,
+  .order-form__tel,
+  .order-form__email {
+    background-color: #f1f1f1;
+  }
+
+  .order-form__order {
+    display: flex;
+  }
+
+  .order-form__button {
+    order: -1;
+    margin-right: 130px;
+  }
+
+  .order-form__color .form__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .order-form__color .form__item {
+    width: 230px;
+  }
+}

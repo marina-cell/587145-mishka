@@ -1,3 +1,11 @@
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+  border: 1px solid #ececec;
+}
+
 .promo__title {
   font-size: 17px;
   line-height: 24px;
@@ -8,6 +16,7 @@
 }
 
 .promo__descr {
+  margin: 0;
   margin-bottom: 28px;
   font-size: 13px;
   line-height: 24px;
@@ -15,6 +24,35 @@
 }
 
 .promo__button {
+  display: block;
   padding: 14px 23px;
   font-size: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__video {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo__wrapper {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .promo__video {
+    width: 600px;
+  }
+
+  .promo__descr-wrapper {
+    width: 370px;
+    margin-top: 55px;
+  }
+
+  .promo__title {
+    position: absolute;
+    top: 15px;
+    right: 300px;
+  }
 }
