@@ -1,3 +1,43 @@
+.copyright {
+  margin: 0 auto;
+  padding-right: 57px;
+
+  &:hover .copyright__icon {
+    path {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link {
+  position: relative;
+}
+
+.copyright__icon {
+  position: absolute;
+  top: -4px;
+  right: -55px;
+}
+
 .copyright__text {
+  color: #000000;
+  text-decoration: none;
   font-size: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin: 0;
+    margin-top: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    margin-top: 18px;
+  }
 }

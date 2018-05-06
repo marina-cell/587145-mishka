@@ -9,6 +9,20 @@
 .product-table__param,
 .product-table__value {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   border-bottom: 1px solid #ececec;
+}
+
+.product-table__param {
+  width: 95px;
+}
+
+.product-table__value {
+  width: 163px;
+}
+
+@media (min-width: @desktop-width) {
+  .product-table__value {
+    width: 197px;
+  }
 }

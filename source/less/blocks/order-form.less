@@ -1,7 +1,7 @@
 .order-form__legend {
   margin: 0;
   padding: 0;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
   color: @additional-color;
   font-size: 14px;
   line-height: 16px;
@@ -9,37 +9,61 @@
 }
 
 .order-form__button {
-  padding: 13px 45px;
+  padding: 14px 45px;
   font-size: 17px;
+  font-weight: 700;
 }
 
 .order-form__message textarea {
   border: 2px solid @additional-color;
 }
 
+.order-form__wrapper {
+  margin-bottom: -7px;
+}
+
 @media (min-width: @tablet-width) {
   .order-form__color,
-  .order-form__tel,
-  .order-form__email {
+  .order-form__wrapper {
     background-color: #f1f1f1;
+  }
+
+  .order-form__wrapper {
+    padding-top: 75px;
+    padding-bottom: 2px;
+    margin-bottom: 65px;
+  }
+
+  .order-form__color .form__wrapper {
+    padding-top: 65px;
+    padding-bottom: 10px;
   }
 
   .order-form__order {
     display: flex;
+    align-items: baseline;
+    margin-bottom: -25px;
+  }
+
+  .order-form__legend {
+    font-size: 17px;
   }
 
   .order-form__button {
     order: -1;
-    margin-right: 130px;
+    padding: 14px 30px;
+    margin-right: 138px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__wrapper {
+    padding-top: 75px;
+    padding-bottom: 4px;
   }
 
-  .order-form__color .form__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .order-form__color .form__item {
-    width: 230px;
+  .order-form__button {
+    margin-left: 175px;
+    margin-right: 173px;
   }
 }

@@ -2,6 +2,32 @@
   .reset-list();
 }
 
+.main-nav__button {
+  position: absolute;
+  top: 32px;
+  right: 30px;
+  z-index: 1;
+  display: block;
+  width: 21px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__button {
+  width: 20px;
+  height: 14px;
+  background-image: url("../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.main-nav--opened .main-nav__button {
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/icon-menu-close.svg");
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
     display: flex;
@@ -9,6 +35,20 @@
   }
 
   .main-nav__button {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__button {
     display: none;
   }
 }

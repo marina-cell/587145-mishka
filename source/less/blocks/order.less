@@ -1,6 +1,23 @@
 .order__descr {
+  margin: 0;
+  margin-top: -7px;
   margin-bottom: 23px;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
+}
+
+@media (min-width: @tablet-width) {
+  .order__descr {
+    margin-bottom: 72px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order__descr {
+    margin-left: 175px;
+    width: 720px;
+  }
 }
