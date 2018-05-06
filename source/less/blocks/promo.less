@@ -2,22 +2,70 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-bottom: 32px;
   border: 1px solid #ececec;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .promo__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 25px;
+  padding-top: 22px;
+  padding-left: 89px;
   font-size: 17px;
   line-height: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 33px;
+    width: 32px;
+    height: 32px;
+    background: url("../img/icon-video.svg") no-repeat 0 0;
+  }
 }
 
 .promo__video {
-  margin-bottom: 28px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.promo__play-button {
+  position: absolute;
+  top: 37px;
+  left: 78px;
+  width: 101px;
+  height: 77px;
+  border: none;
+  background: url("../img/icon-play.svg") no-repeat 0 0;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+
+.promo__descr-wrapper {
+  padding-left: 33px;
+  padding-right: 34px;
+  padding-bottom: 32px;
 }
 
 .promo__descr {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -30,8 +78,42 @@
 }
 
 @media (min-width: @tablet-width) {
+  .promo__title {
+    margin-left: 16px;
+    margin-bottom: 33px;
+    font-size: 20px;
+
+    &::before {
+      top: 18px;
+      left: 24px;
+    }
+  }
+
   .promo__video {
     order: -1;
+    margin-bottom: 10px;
+  }
+
+  .promo__descr-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 45px;
+  }
+
+  .promo__descr {
+    margin-bottom: 35px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .promo__img {
+    width: 668px;
+    height: 455px;
+  }
+
+  .promo__play-button {
+    top: 187px;
+    left: 282px;
   }
 }
 
@@ -41,18 +123,40 @@
     position: relative;
   }
 
-  .promo__video {
-    width: 600px;
+  .promo__img {
+    width: 682px;
+    height: 455px;
   }
 
   .promo__descr-wrapper {
-    width: 370px;
-    margin-top: 55px;
+    width: 230px;
+    padding-left: 78px;
+    padding-right: 0;
+    margin-top: 180px;
+  }
+
+  .promo__descr {
+    margin-bottom: 45px;
   }
 
   .promo__title {
     position: absolute;
-    top: 15px;
-    right: 300px;
+    top: 77px;
+    right: 125px;
+    width: 165px;
+
+    &::before {
+      top: -32px;
+      left: 92px;
+    }
+  }
+
+  .promo__video {
+    margin-bottom: 0;
+  }
+
+  .promo__play-button {
+    top: 192px;
+    left: 290px;
   }
 }

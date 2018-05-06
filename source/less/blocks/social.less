@@ -1,3 +1,40 @@
+.social {
+  display: flex;
+  margin-bottom: 27px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .social__list {
   .reset-list();
+  display: flex;
+  margin: 0 auto;
+}
+
+.social__item {
+  padding: 21px;
+  padding-bottom: 23px;
+
+  &:hover .social__icon {
+    path {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__icon--facebook {
+  margin-top: -5px;
+}
+
+.social__icon--twitter {
+  margin-right: 6px;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    border-bottom: none;
+  }
 }

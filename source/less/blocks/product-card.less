@@ -1,38 +1,53 @@
 .product-card {
   border: 1px solid #ececec;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .product-card__info {
-  padding: 25px;
+  padding: 25px 26px 28px 27px;
 }
 
 .product-card__title {
   padding: 0;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 4px;
   font-size: 17px;
   line-height: 24px;
+}
+
+.product-card__title a {
+  color: #000000;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product-card__descr {
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   color: @additional-color;
-  font-size: 17px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 30px;
   font-weight: 400;
-}
-
-.product-card__img {
-  margin-bottom: 25px;
 }
 
 @media (min-width: @tablet-width) {
   .product-card {
     display: flex;
-    min-height: 334px;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   .product-card__info {
@@ -42,24 +57,61 @@
     padding: 25px;
   }
 
+  .product-card__title {
+    margin-left: 5px;
+    margin-bottom: 7px;
+    font-size: 20px;
+  }
+
+  .product-card__descr {
+    font-size: 15px;
+    margin-left: 3px;
+  }
+
   .product-card__img {
-    width: 334px;
-    margin-bottom: 10px;
+    height: 332px;
+  }
+
+  .product-card__img img {
+    width: 390px;
+    height: 332px;
   }
 
   .product-card__order {
     margin-top: auto;
+    margin-bottom: 2px;
+    margin-left: 8px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product-card {
     flex-direction: column;
-    min-height: 316px;
-    margin-right: 10px;
+    width: 316px;
+    margin-right: 50px;
+  }
+
+  .product-card__info {
+    width: 259px;
+    min-height: 146px;
+    padding-left: 20px;
+    padding-bottom: 23px;
   }
 
   .product-card__title {
-    width: 240px;
+    margin-bottom: 6px;
+  }
+
+  .product-card__descr {
+    margin-left: 6px;
+    margin-bottom: 13px;
+  }
+
+  .product-card__img {
+    height: 462px;
+  }
+
+  .product-card__img img {
+    height: 462px;
   }
 }
