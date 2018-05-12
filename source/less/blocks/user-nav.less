@@ -45,7 +45,7 @@
     min-width: auto;
     padding: 0;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   .user-nav__item {
@@ -63,6 +63,7 @@
 
   .user-nav__icon {
     top: 35px;
+    left: 33px;
   }
 
   .user-nav__search-title {
@@ -70,8 +71,16 @@
   }
 
   .user-nav__cart-title {
-    position: absolute;
-    top: 30px;
-    left: 80px;
+    padding-left: 82px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-nav__link--cart {
+    width: 315px;
+  }
+
+  .user-nav__cart-title {
+    padding-left: 84px;
   }
 }

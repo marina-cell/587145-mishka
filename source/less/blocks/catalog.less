@@ -1,3 +1,7 @@
+.catalog__wrapper {
+  margin-top: 30px;
+}
+
 .catalog__product {
   margin-bottom: 30px;
 }
@@ -9,7 +13,17 @@
   margin: 0 auto;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog__wrapper {
+    margin-top: 70px;
+  }
+}
+
 @media (min-width: @desktop-width) {
+  .catalog__wrapper {
+    margin-top: 113px;
+  }
+
   .catalog__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,5 +32,6 @@
 
   .catalog__item {
     width: 316px;
+    height: auto;
   }
 }
