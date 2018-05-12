@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   border: 1px solid #ececec;
+  margin-bottom: 57px;
 
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -35,7 +36,7 @@
 
 .promo__video {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .promo__play-button {
@@ -65,7 +66,7 @@
 
 .promo__descr {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -78,6 +79,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .promo__wrapper {
+    margin-bottom: 65px;
+  }
+
   .promo__title {
     margin-left: 16px;
     margin-bottom: 33px;
@@ -106,11 +111,6 @@
     line-height: 30px;
   }
 
-  .promo__img {
-    width: 668px;
-    height: 455px;
-  }
-
   .promo__play-button {
     top: 187px;
     left: 282px;
@@ -121,11 +121,7 @@
   .promo__wrapper {
     flex-direction: row;
     position: relative;
-  }
-
-  .promo__img {
-    width: 682px;
-    height: 455px;
+    margin-bottom: 105px;
   }
 
   .promo__descr-wrapper {
@@ -152,7 +148,13 @@
   }
 
   .promo__video {
+    height: 455px;
     margin-bottom: 0;
+  }
+
+  .promo__img {
+    width: 682px;
+    height: auto;
   }
 
   .promo__play-button {

@@ -1,6 +1,7 @@
 .contacts__wrapper {
-  padding-top: 31px;
+  padding-top: 42px;
   margin-left: -1px;
+  margin-bottom: 39px;
 }
 
 .contacts__title {
@@ -32,7 +33,7 @@
 .contacts__address {
   display: flex;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
   padding: 0;
 }
 
@@ -52,13 +53,14 @@
 
 .contacts__map-wrapper {
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
+  height: 457px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 30%;
-    right: 50%;
+    top: 31%;
+    left: 44%;
     width: 67px;
     height: 100px;
     background: url("../img/icon-map-pin.svg") no-repeat 0 0;
@@ -66,19 +68,40 @@
 }
 
 .contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
   width: 100%;
-  height: 457px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contacts__map--interactive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: none;
 }
 
 .contacts__button {
   display: flex;
-  padding: 12px 40px 14px 50px;
+  padding: 12px 40px 16px 50px;
   margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
     padding-top: 65px;
+    margin-bottom: 58px;
   }
 
   .contacts__title {
@@ -109,7 +132,7 @@
   }
 
   .contacts__caption {
-    margin-right: 23px;
+    margin-right: 24px;
   }
 
   .contacts__email,
@@ -122,7 +145,12 @@
   }
 
   .contacts__map-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
+
+    &::after {
+      top: 30%;
+      left: 47.5%;
+    }
   }
 
   .contacts__button {
@@ -137,7 +165,8 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 120px;
-    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 3px;
   }
 
   .contacts__title {
@@ -164,11 +193,16 @@
 
   .contacts__map-wrapper {
     width: 525px;
+
+    &::after {
+      top: 32%;
+      left: 45.5%;
+    }
   }
 
   .contacts__button {
     display: inline-block;
-    margin-top: -180px;
+    margin-top: -185px;
     margin-left: 105px;
   }
 }

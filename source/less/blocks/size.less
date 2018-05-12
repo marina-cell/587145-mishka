@@ -1,8 +1,9 @@
 .size__button {
-  width: 112px;
+  width: 82px;
   height: 52px;
   color: @additional-color;
   font-size: 17px;
+  line-height: 16px;
   text-align: center;
   vertical-align: middle;
   border: 2px solid #ececec;
@@ -24,4 +25,10 @@
 
 .size__item {
   display: inline;
+}
+
+@media (min-width: @tablet-width) {
+  .size__button {
+    width: 112px;
+  }
 }

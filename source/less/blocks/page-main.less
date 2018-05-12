@@ -3,13 +3,13 @@
 }
 
 .page-main__header {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
+  padding-top: 70px;
+  padding-bottom: 75px;
   background-color: #f1f1f1;
 }
 
 .page-main__title {
-  padding-top: 70px;
-  padding-bottom: 74px;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
@@ -17,28 +17,52 @@
 
 @media (min-width: @tablet-width) {
   .page-main {
+    display: block;
     margin-top: -40px;
   }
 
   .page-main__header {
-    margin-bottom: 85px;
+    position: relative;
+    z-index: -1;
+    margin-bottom: 64px;
+    padding-top: 93px;
+    padding-bottom: 90px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 22px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+      background-position: center;
+    }
   }
 
   .page-main__title {
-    padding-top: 93px;
     font-size: 43px;
     line-height: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-main__title {
+  .page-main__header {
+    margin-bottom: 105px;
     padding-top: 91px;
-    font-size: 53px;
-    line-height: 57px;
+    padding-bottom: 120px;
+
+    &::after {
+      height: 34px;
+      background-size: auto;
+    }
   }
 
-  .page-main__header {
-    margin-bottom: 158px;
+  .page-main__title {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
