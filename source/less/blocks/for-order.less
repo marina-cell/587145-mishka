@@ -15,18 +15,19 @@
   right: -6px;
   background-color: transparent;
   border: none;
-  opacity: 0.2;
   cursor: pointer;
 
-  &:hover {
-    opacity: 1;
-
-    path {
-      fill: @fancy-color;
-    }
+  .for-order__icon {
+    fill: #231f20;
+    opacity: 0.2;
   }
 
-  &:active {
+  &:hover .for-order__icon {
+    opacity: 1;
+    fill: @fancy-color;
+  }
+
+  &:active .for-order__icon {
     opacity: 0.3;
   }
 }

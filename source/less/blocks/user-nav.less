@@ -4,17 +4,18 @@
 }
 
 .user-nav__link[href] {
+  .user-nav__icon {
+    fill: #231f20;
+  }
+
   &:hover {
     span {
       opacity: 0.6;
     }
 
-    path {
-      fill: @fancy-color;
-    }
-
     .user-nav__icon {
       opacity: 1;
+      fill: @fancy-color;
     }
   }
 
