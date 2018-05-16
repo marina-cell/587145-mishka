@@ -5,11 +5,16 @@
 .order-form__legend {
   margin: 0;
   padding: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   color: @additional-color;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
+
+  sup {
+    font-size: 15px;
+    top: 0;
+  }
 }
 
 .order-form__button {
@@ -27,19 +32,19 @@
 }
 
 @media (min-width: @tablet-width) {
-  .order-form__color,
-  .order-form__wrapper {
+  .order-form__color {
+    margin-bottom: 65px;
     background-color: #f1f1f1;
   }
 
   .order-form__wrapper {
-    padding-top: 75px;
-    padding-bottom: 2px;
-    margin-bottom: 68px;
+    padding-top: 65px;
+    padding-bottom: 5px;
+    margin-bottom: 66px;
+    background-color: #f1f1f1;
   }
 
-  .order-form__color .form__wrapper {
-    padding-top: 65px;
+  .order-form__color .form {
     padding-bottom: 10px;
   }
 
@@ -56,18 +61,23 @@
   .order-form__button {
     order: -1;
     padding: 14px 30px;
-    margin-right: 138px;
+    margin-right: 137px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .order-form__wrapper {
-    padding-top: 75px;
-    padding-bottom: 4px;
+    padding-top: 65px;
+    padding-bottom: 1px;
+    margin-bottom: 67px;
   }
 
   .order-form__button {
     margin-left: 175px;
     margin-right: 173px;
+  }
+
+  .order-form__order {
+    margin-bottom: -23px;
   }
 }
