@@ -50,6 +50,24 @@
   border: 2px solid @additional-color;
 }
 
+.form__input--radio:not(:disabled) + .form__label:hover::before,
+.form__input--radio:focus + .form__label::before,
+.form__input--checkbox:not(:disabled) + .form__label:hover::before,
+.form__input--checkbox:focus + .form__label::before {
+  border-color: #62d1ba;
+}
+
+.form__input--radio:active:not(:disabled) + .form__label::before,
+.form__input--checkbox:active:not(:disabled) + .form__label::before {
+  border-color: #c7c7c7;
+}
+
+.form__input--radio:disabled + .form__label::before,
+.form__input--checkbox:disabled + .form__label::before {
+  border-color: #c7c7c7;
+  cursor: auto;
+}
+
 .form__input--checkbox:checked + .form__label::after {
   content: "";
   position: absolute;
@@ -86,7 +104,6 @@
 
 .form__legend {
   position: relative;
-  margin-left: -3px;
   margin-bottom: 32px;
   color: @fancy-color;
   font-size: 17px;
@@ -104,23 +121,27 @@
 }
 
 .form--name {
+  margin-top: 42px;
+  margin-bottom: 7px;
+
   .form__legend {
-    margin-top: 25px;
-    margin-bottom: 27px;
+    margin-bottom: 9px;
   }
 }
 
 .form--tel {
+  margin-bottom: 10px;
+
   .form__legend {
     margin-top: -10px;
-    margin-bottom: -11px;
+    margin-bottom: -12px;
   }
 }
 
 .form--email {
   .form__legend {
     margin-top: -8px;
-    margin-bottom: -13px;
+    margin-bottom: -14px;
 
     &::after {
       content: "";
@@ -142,14 +163,12 @@
     padding-right: 35px;
   }
 
-  &::after {
+  .form__icon {
     position: absolute;
-    content: "";
     top: 12px;
     right: 8px;
     width: 25px;
     height: 25px;
-    background: url("../img/icon-phone.svg") no-repeat 0 0;
   }
 }
 
@@ -161,14 +180,12 @@
     padding-right: 35px;
   }
 
-  &::after {
+  .form__icon {
     position: absolute;
-    content: "";
     top: 12px;
-    right: 2px;
-    width: 33px;
-    height: 26px;
-    background: url("../img/icon-mail.svg") no-repeat 0 0;
+    right: 3px;
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -182,15 +199,42 @@
     border-bottom: 2px solid #000000;
     font-size: 17px;
     line-height: 18px;
-    color: rgba(68, 68, 68, 0.3);
+    color: @additional-color;
   }
+
+  :hover,
+  :focus {
+    border-color: #62d1ba;
+  }
+}
+
+.form__input--text:hover .form__icon,
+.form__input--text input:focus + .form__icon,
+.form__input--text input:active + .form__icon {
+  fill: #62d1ba;
+}
+
+.form__input--text input::-moz-placeholder {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.form__input--message textarea:-moz-placeholder {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.form__input--text input::-webkit-input-placeholder {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.form__input--message textarea::-webkit-input-placeholder {
+  color: rgba(68, 68, 68, 0.3);
 }
 
 .form--message {
   margin-bottom: 20px;
 
   .form__legend {
-    margin-bottom: 22px;
+    margin-bottom: 3px;
   }
 }
 
@@ -204,15 +248,18 @@
     padding: 15px;
     font-size: 17px;
     line-height: 18px;
+    color: @additional-color;
+  }
+
+  textarea:hover,
+  textarea:focus {
+    border-color: #62d1ba;
   }
 }
 
 @media (min-width: @tablet-width) {
   .form {
-    margin-bottom: 10px;
-  }
-
-  .form__wrapper {
+    margin-bottom: 7px;
     display: flex;
   }
 
@@ -223,6 +270,7 @@
 
   .form__legend {
     margin-left: 0;
+    margin-bottom: -20px;
 
     &::after {
       display: none;
@@ -259,7 +307,7 @@
   }
 
   .form__item--radio {
-    margin-left: 145px;
+    margin-left: 180px;
     margin-bottom: 59px;
   }
 
@@ -278,18 +326,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-left: 124px;
+    padding-left: 162px;
+  }
+
+  .form__legend--color {
+    padding-top: 67px;
   }
 
   .form--name {
+    margin-top: 0;
+    margin-bottom: 12px;
+
     .form__legend {
-      margin-top: 55px;
+      margin-top: 0;
       margin-right: 125px;
     }
   }
 
   .form__inner {
-    margin-top: 35px;
+    margin-left: 168px;
+    margin-top: -48px;
   }
 
   .form__input--text {
@@ -299,11 +355,11 @@
     input {
       display: block;
       width: 358px;
-      margin-top: -20px;
+      margin-top: -19px;
       margin-bottom: 0;
       margin-left: 125px;
       padding-left: 17px;
-      padding-top: -4px;
+      padding-top: 0;
       padding-bottom: 10px;
       font-size: 19px;
     }
@@ -313,61 +369,62 @@
     input {
       width: 408px;
       margin-left: 75px;
+      padding-left: 14px;
     }
   }
 
   .form--tel {
     .form__legend {
-      margin-top: -8px;
-      margin-bottom: -12px;
+      margin-top: 10px;
+      margin-bottom: -20px;
     }
   }
 
   .form__input--tel {
     position: relative;
+    margin-bottom: 32px;
 
     input {
       width: 501px;
-      margin-left: 131px;
-      margin-top: -32px;
+      margin-left: 168px;
+      margin-top: -22px;
       background-color: #f1f1f1;
     }
 
-    &::after {
-      top: -30px;
-      right: 22px;
+    .form__icon {
+      top: -3px;
+      right: 28px;
     }
   }
 
   .form__input--email {
     input {
       width: 501px;
-      margin-left: 105px;
-      margin-top: -32px;
+      margin-left: 167px;
+      margin-top: -26px;
       background-color: #f1f1f1;
     }
 
-    &::after {
-      top: -31px;
-      right: 18px;
+    .form__icon {
+      top: -3px;
+      right: 22px;
     }
   }
 
   .form--message {
-    .form__legend {
-      margin-right: 128px;
-    }
+    margin-bottom: 10px;
   }
 
   .form__input--message {
     margin-bottom: 40px;
+    margin-left: 167px;
 
     textarea {
       box-sizing: border-box;
       width: 500px;
       min-height: 142px;
       padding: 15px;
-      margin-top: -33px;
+      margin-top: -57px;
       font-size: 19px;
     }
   }
@@ -379,21 +436,22 @@
   }
 
   .form__legend {
-    margin-left: 62px;
+    margin-left: 65px;
   }
 
   .form__legend--color {
     margin-left: 58px;
+    padding-top: 65px;
   }
 
   .form__item--radio {
-    margin-left: 90px;
+    margin-left: 190px;
   }
 
   .form__item--checkbox {
     width: 180px;
     margin-bottom: 58px;
-    padding-left: 80px;
+    padding-left: 81px;
   }
 
   .form__item--checkbox:nth-child(2n+1) {
@@ -405,7 +463,7 @@
   }
 
   .form__list--checkbox {
-    margin-left: 75px;
+    margin-left: 12px;
   }
 
   .form--name {
@@ -413,12 +471,11 @@
 
     .form__legend {
       margin-left: 60px;
-      margin-right: 70px;
     }
   }
 
   .form__input--text {
-    margin-left: 5px;
+    margin-left: 8px;
 
     input {
       width: 555px;
@@ -427,38 +484,39 @@
 
   .form__input--text:first-child {
     input {
-      width: 605px;
+      width: 610px;
+    }
+  }
+
+  .form--email {
+    .form__legend {
+      margin-left: 60px;
     }
   }
 
   .form__input--tel {
+    margin-bottom: 33px;
+
     input {
       width: 700px;
-      margin-left: 77px;
     }
 
-    &::after {
-      top: -31px;
-      right: 8px;
+    .form__icon {
+      top: -1px;
+      right: 183px;
     }
   }
 
   .form__input--email {
     input {
       width: 700px;
-      margin-left: 51px;
+      margin-top: -30px;
       padding-bottom: 12px;
     }
 
-    &::after {
-      top: -31px;
-      right: 3px;
-    }
-  }
-
-  .form--message {
-    .form__legend {
-      margin-right: 73px;
+    .form__icon {
+      top: 0;
+      right: 179px;
     }
   }
 
@@ -466,7 +524,8 @@
     textarea {
       width: 700px;
       padding-top: 13px;
-      margin-bottom: -5px;
+      margin-left: 7px;
+      margin-bottom: -4px;
     }
   }
 }

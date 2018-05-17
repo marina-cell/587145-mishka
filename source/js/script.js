@@ -13,6 +13,7 @@ var cur_size = document.querySelectorAll('.size__button');
 
 // Меню
 navMain[0].classList.remove('main-nav--nojs');
+navMain[1].classList.remove('main-nav--nojs');
 
 navBtn.addEventListener('click', function() {
   for(var i = 0; i < 2; i++)
