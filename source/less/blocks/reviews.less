@@ -6,8 +6,8 @@
     position: absolute;
     left: 0;
     bottom: -6px;
-    width: 100%; //Для PP=1190px;
-    height: 6px;
+    width: 100%;
+    height: 7px;
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: contain;
@@ -107,8 +107,7 @@
   .reviews {
     &::after {
       bottom: -2px;
-      // width: 1110px; //Для PP
-      height: 15px;
+      height: 17px;
     }
   }
 
@@ -197,14 +196,15 @@
 @media (min-width: @desktop-width) {
   .reviews {
     &::after {
-      bottom: -2px;
-      // width: 1300px; //Для PP
-      height: 21px;
+      bottom: 0;
+      height: 23px;
     }
   }
 
   .reviews__wrapper {
-    margin-left: 100px;
+    width: 1000px;
+    margin-left: 50px;
+    margin-right: 0;
     margin-bottom: 70px;
     padding-bottom: 65px;
   }

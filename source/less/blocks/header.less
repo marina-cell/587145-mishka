@@ -108,7 +108,6 @@
 @media (min-width: @tablet-width) {
   .header {
     position: relative;
-    height: 746px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: 50% 65%;
     background-size: cover;
@@ -122,7 +121,7 @@
       position: absolute;
       left: 0;
       bottom: -17px;
-      width: 100%; //Для PP=1252px;
+      width: 100%;
       height: 38px;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
@@ -133,7 +132,9 @@
 
   .header__wrapper {
     width: @tablet-width;
+    min-height: 746px;
     margin: 0 auto;
+    margin-bottom: 42px;
   }
 
   .header__title {
@@ -157,10 +158,6 @@
   }
 
   .header__item:hover {
-    .header__link {
-      padding-bottom: 37px;
-    }
-
     transform: translateY(-5px);
   }
 
@@ -183,12 +180,16 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
     }
+
+    &::after {
+      bottom: -16px;
+      height: 37px;
+      background-size: cover;
+    }
   }
 
   .header__wrapper {
     width: @desktop-width;
-    margin: 0 auto;
-    margin-bottom: 68px;
   }
 
   .header__title {
@@ -206,13 +207,5 @@
     padding-left: 36px;
     padding-top: 30px;
     padding-bottom: 32px;
-  }
-
-  .header__item:hover {
-    .header__link {
-      padding-bottom: 37px;
-    }
-
-    transform: translateY(-5px);
   }
 }
