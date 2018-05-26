@@ -162,10 +162,11 @@
 
 @media (min-width: @desktop-width) {
   .contacts__wrapper {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     margin-left: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     padding-top: 3px;
   }
 
@@ -201,8 +202,16 @@
   }
 
   .contacts__button {
-    display: inline-block;
-    margin-top: -185px;
-    margin-left: 105px;
+    position: absolute;
+    top: 407px;
+    left: 155px;
+  }
+}
+
+@media (min-width: @overdesktop-width) {
+  .contacts__wrapper {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
